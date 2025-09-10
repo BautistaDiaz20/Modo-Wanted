@@ -1,0 +1,113 @@
+/* Pine Forest - Darker, Serious, Mystical Title */
+
+body {
+    background: linear-gradient(135deg, #1b2d24 0%, #35523c 100%);
+    font-family: 'Merriweather', 'Georgia', serif;
+    color: #e0e5d8;
+    margin: 0;
+    min-height: 100vh;
+    background-image: url('./img/trees-forest-green-top-view-wallpaper-preview\ \(1\).png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: 'Merriweather', 'Georgia', serif;
+    color: #7e5ca4; /* místico, púrpura bosque */
+    /* Quitar brillo y sombra llamativa */
+    text-shadow: none;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    text-align: center;
+    background: none;
+    padding-left: 0;
+}
+
+#searchInput {
+    display: block;
+    margin: 30px auto 20px auto;
+    padding: 12px 18px;
+    width: 320px;
+    border: 2px solid #23422a;
+    border-radius: 25px;
+    font-size: 1.1em;
+    /* Quitar icono de pino */
+    background: #232e27;
+    color: #e0e5d8;
+    box-shadow: 0 2px 8px rgba(34,49,46,0.18);
+    outline: none;
+    transition: border 0.2s, background 0.2s;
+}
+
+#searchInput:focus {
+    border: 2px solid #7e5ca4;
+    background-color: #2e3d33;
+}
+
+#userList {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+#userList li {
+    background: rgba(34, 49, 46, 0.93);
+    border: 2px solid #23422a;
+    border-radius: 18px;
+    margin-bottom: 22px;
+    padding: 22px 28px 18px 28px;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+    position: relative;
+    transition: transform 0.15s, border 0.2s, background 0.2s;
+    cursor: pointer;
+}
+
+#userList li:hover {
+    transform: scale(1.03) rotate(-1deg);
+    border-color: #7e5ca4;
+    background: #2e3d33;
+}
+
+.label {
+    font-weight: bold;
+    color: #7e5ca4;
+    letter-spacing: 1px;
+    font-family: 'Merriweather', 'Georgia', serif;
+}
+
+mark {
+    background: #35523c;
+    color: #e0e5d8;
+    border-radius: 4px;
+    padding: 0 3px;
+}
+
+/* Quitar detalles de bosque */
+#userList li::before,
+#userList li:nth-child(1)::after {
+    content: none !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: #1b2d24;
+}
+::-webkit-scrollbar-thumb {
+    background: #23422a;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    #userList {
+        max-width: 98vw;
+    }
+    #searchInput {
+        width: 90vw;
+    }
+}
+
+/* Importa la fuente Merriweather de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
